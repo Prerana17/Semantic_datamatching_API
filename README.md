@@ -28,3 +28,8 @@ Semantic Audience Matching API: Finding the Best Fit
 -RStudio Connect: A commercial platform for publishing R content, including Plumber APIs.
 -Other approaches include PM2, Docker, and OpenCPU.
 (References: https://www.rplumber.io/ , https://rstudio.github.io/cheatsheets/html/plumber.html)
+
+# For Sementic string matching: Using Cosine Similarity
+
+# Cosine Similariy:
+
