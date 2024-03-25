@@ -9,22 +9,81 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## GitHub Documents
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+# Code Description:
 
-## Including Code
+The provided R code contains a function called calculate_and_match that calculates the cosine similarity between an input segment and a set of source segments, and performs semantic matching based on a specified threshold.
 
-You can include R code in the document as follows:
+# Function Description:
 
-```{r cars}
-summary(cars)
+- Function Name: calculate_and_match
+
+- Input Parameters:
+- input_segments: A list of segments to be compared with the source segments.
+- source_segments_file: The path to the csv/RDS file containing the source segments.
+- threshold: The minimum similarity score required for a match to be considered valid. Default value is 0.5.
+
+- Output:
+- Returns a list containing the best matching segment and its similarity score.
+
+
+```{r function}
+calculate_and_match <- function(input_segment, source_segments, threshold = 0.5) {
+  #overall fuction working to check similarity and matching score
+}
+
 ```
 
-## Including Plots
+# Code Process:
+1.	Initialization:
+-The function initializes variables to store the best match and its similarity score.
 
-You can also embed plots, for example:
+2.	Read Source Segments:
+- The function reads the source segments from the provided RDS file using the readRDS function. These source segments serve as the reference for semantic matching.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+3.	Prepare Input Segments:
+- The input segments provided as a list are converted into a single string separated by "><|" using the paste function. This format is suitable for comparison with the source segments.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+4.	Cosine Similarity Calculation:
+- The function loops through each source segment and calculates the cosine similarity between the input segment and each source segment.
+
+- Cosine similarity is calculated based on the term frequency vectors of the input and source segments.
+
+- The similarity score is updated if it exceeds the threshold and is higher than the previous best similarity score.
+
+5.	Semantic Matching:
+- The function determines the best match based on the highest similarity score that exceeds the threshold.
+
+- If no suitable match is found, the function returns "No suitable match found."
+
+6.	API Response Construction:
+- The function constructs an API response containing the best matching segment and its similarity score.
+
+7.	Return Output:
+- The function returns the API response containing the best matching segment and its similarity score.
+
+# Usage:
+
+To use the calculate_and_match function:
+
+1.	Provide a list of input segments.
+
+2.	Specify the path to the RDS file containing the source segments.
+
+3.	Optionally, adjust the threshold value for similarity score.
+
+4.	Call the function with the provided parameters.
+
+5.	Receive the API response containing the best matching segment and its similarity score.
+
+# Error Handling:
+
+The code includes basic error handling to ensure robustness:
+
+- It checks if the source_segments_file is a valid file path and exists.
+
+- It verifies that the input_segments parameter is provided as a list.
+
+# Conclusion:
+The calculate_and_match function serves as a useful tool for performing semantic matching between input segments and a set of source segments, allowing for efficient categorization or classification tasks based on similarity scores. By providing clear documentation and error handling, the code ensures reliability and ease of use for various applications.
+
+
