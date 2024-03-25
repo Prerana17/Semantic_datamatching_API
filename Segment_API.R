@@ -116,7 +116,6 @@ summary(input_segment)
    return(response)
  }
 
-
 # Perform semantic matching
 result <- calculate_and_match(input_segment, source_segments, threshold = 0.5)
-print(result)
+#print(result)
