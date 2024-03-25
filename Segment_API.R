@@ -58,9 +58,11 @@ summary(input_segment)
 
 # # Merged function for calculating cosine similarity and performing semantic matching
  calculate_and_match <- function(input_segment, source_segments, threshold = 0.5) {
-
+      
+   # Convert input_segments to a single string separated by "><\\|"
+   #input_segment <- paste(input_segments, collapse = "><\\|")
+   
    # Convert input_segment and source_segments to character vectors
-
    input_segment <- as.character(input_segment)
    source_segments <- lapply(source_segments, as.character)
 
@@ -100,7 +102,7 @@ summary(input_segment)
        similarity <- dot_product / (input_norm * source_norm)
      }
 
-     # Update best similarity and best match if similarity exceeds threshold and is the highest so far
+     # Update the best similarity and best match if similarity exceeds the threshold and is the highest so far
      if (similarity >= threshold && similarity > best_similarity) {
        best_similarity <- similarity
        best_match <- source_segment
