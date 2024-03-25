@@ -3,15 +3,11 @@ title: "Semantic Audience Matching API: Finding the Best Fit"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## GitHub Documents
 
 # Code Description:
 
-The provided R code contains a function called calculate_and_match that calculates the cosine similarity between an input segment and a set of source segments, and performs semantic matching based on a specified threshold.
+The provided R code contains a function called calculate_and_match that calculates the cosine similarity between an input segment and a set of source segments and performs semantic matching based on a specified threshold.
 
 # Function Description:
 
@@ -19,8 +15,8 @@ The provided R code contains a function called calculate_and_match that calculat
 
 - Input Parameters:
 - input_segments: A list of segments to be compared with the source segments.
-- source_segments_file: The path to the csv/RDS file containing the source segments.
-- threshold: The minimum similarity score required for a match to be considered valid. Default value is 0.5.
+- source_segments_file: The path to the CSV/RDS file containing the source segments.
+- threshold: The minimum similarity score required for a match to be considered valid. The default value is 0.5.
 
 - Output:
 - Returns a list containing the best matching segment and its similarity score.
@@ -28,7 +24,7 @@ The provided R code contains a function called calculate_and_match that calculat
 
 ```{r function}
 calculate_and_match <- function(input_segment, source_segments, threshold = 0.5) {
-  #overall fuction working to check similarity and matching score
+  #overall function working to check similarity and matching score
 }
 
 ```
