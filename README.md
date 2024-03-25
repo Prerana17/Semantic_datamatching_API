@@ -73,7 +73,7 @@ Semantic Data Matching API: Finding the Best Fit
       Cosine similarity aids in suggesting similar items (e.g., movies, products) based on user preferences.
       
   **iv. Document Clustering:**
-      Grouping similar documents together using cosine similarity.
+      Grouping similar documents together using cosine similarity (reference: https://medium.com/@techclaw/cosine-similarity-between-two-arrays-for-word-embeddings-c8c1c98811b).
 
 
 
