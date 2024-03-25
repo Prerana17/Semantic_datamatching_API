@@ -3,13 +3,13 @@ Semantic Audience Matching API: Finding the Best Fit
 
 # Studies: About API
 
-# What is an API?
+* What is an API?
 -API stands for Application Programming Interface.
 -It acts as a bridge between different software applications, allowing them to communicate and exchange data.
 -Think of it as a set of rules or protocols that define how applications can interact with each other.
 -APIs enable developers to integrate data, services, and functionality from other applications without building everything from scratch.
 
-# How Do APIs Work?
+* How Do APIs Work?
 -Computers follow communication protocols to interact with each other. These protocols define the rules for communication.
 -For web-based APIs, the HTTP protocol (Hyper Text Transfer Protocol) is commonly used.
 -The request-response cycle characterizes how APIs work:
@@ -20,7 +20,7 @@ Semantic Audience Matching API: Finding the Best Fit
 -URL: The web address where the request is made.
 -Method: Whether data is requested (GET) or sent (POST).
 
-# Plumber API in R
+* Plumber API in R
 -Plumber is an R package that allows you to create web APIs by annotating your existing R functions.
 
 # Hosting Plumber APIs
