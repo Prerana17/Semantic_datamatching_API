@@ -22,7 +22,9 @@ library(jsonlite)
  jsonlite::fromJSON(resp_raw)
  
  calculate_and_match <- function(input_segment, source_segments, threshold = 0.5) {
- 
+
+   #input_segment <- paste(input_segments, collapse = "|")
+    
    b_url <- "http://127.0.0.1:5022/Segment_API"
    
    # Define parameters
