@@ -57,8 +57,8 @@ calculate_and_match <- function(input_segment, source_segments, threshold = 0.5)
   # Loop through each source segment
   for (source_segment in source_segments) {
     # Split the input segment into a vector
-    input_vector <- unlist(strsplit(input_segment, "><\\|"))
-    source_vector <- unlist(strsplit(source_segment, "><\\|"))
+    input_vector <- unlist(strsplit(input_segment, "\\|"))
+    source_vector <- unlist(strsplit(source_segment, "\\|"))
     
     # Combine input and source vectors to create a bag of words
     bag_of_words <- unique(c(input_vector, source_vector))
