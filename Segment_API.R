@@ -14,7 +14,7 @@ library(stringr)
 #Step 2: Data Processing
 
 # Read the CSV file
-s_audience_segments <- read.csv("C:/Users/Prerana/Desktop/source_segments.csv", sep = ";", header = TRUE, stringsAsFactors = FALSE)
+s_audience_segments <- read.csv("source_segments.csv", sep = ";", header = TRUE, stringsAsFactors = FALSE)
 
 # Rename the columns names for better readability
 colnames(s_audience_segments) <- c("label_id_long", "label_id", "parent_id", "segment_description", "label_name")
@@ -25,7 +25,7 @@ head(s_audience_segments)
 colSums(is.na(s_audience_segments))
 
 # Read the JSON file
-json_text <- readLines("C:/Users/Prerana/Desktop/test_audiences.json")
+json_text <- readLines("test_audiences.json")
 
 # Join the lines into a single string
 json_string <- paste(json_text, collapse = "\n")
